@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="css/style.css?1" type="text/css"/>
+</head>
+<body>
+  <div id="card">
+    <div id="menu"><button id="openScreen" title="Capture screen windows">Capture desktop</button><button id="openCamera" title="Capture webcam">Capture webcam</button><button id="generate">Generate</button></div>
+  	<div class="imagesAll"></div>
+  	<div class="editor">
+  		<div class="transparent"><canvas id="c"></canvas></div>
+      <video autoplay="true" id="videoElement"></video>
+      <div class="buttonScreen"><button id="saveimage">save</button></div>
+  		<div class="divTable">
+        <div id="control"><button id="next">Next</button><button id="previous">Previous</button><span class="count_select">0</span>/<span class="count_all">0</span></div>
+  	  	<table id="table">
+  		  	<tr id="tableHeader"><th>filename</th><th>width</th><th>height</th><th>class</th><th>xmin</th><th>ymin</th><th>xmax</th><th>ymax</th></tr>
+        </table>      
+      </div>
+  	</div>
+  </div>
+  <div id="selector">Enter class<input type="text"></div>
+  <div class="trash"></div>
+  <canvas id="t" style="display:none;"></canvas>
+  <div id="modal_background">
+    <div id="modal">
+      <table>
+        <tr>
+          <td><input type="checkbox" id="check_train"> Train</td>
+          <td></td>
+          <td>Test <input type="checkbox" id="check_test"></td>
+        </tr>
+        <tr>
+          <td colspan="3">Relation</td>
+        </tr>
+        <tr>
+          <td colspan="3"><input type="range" min="0" max="100" step="1" value="50" id="relation" disabled></td>
+        </tr>
+        <tr>
+          <td colspan="3">Mixing</td>
+        </tr>
+        <tr>
+          <td colspan="3"><input type="range" min="0" max="100" step="1" value="0" id="mixing" disabled></td>
+        </tr>
+        <tr>
+          <td><div id="count_train"></div></td>
+          <td><button id="generate_data">Generate</button></td>
+          <td><div id="count_test"></div></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/fabric.js"></script>
+  <script src="js/captureExtension.js?2"></script>
+  <script src="js/jszip.min.js"></script>
+  <script src="js/FileSaver.js"></script>
+  <!-- <script src="js/tfmodule/dataset_util.js?2"></script> -->
+  <script src="js/db.js?5"></script>
+  <script src="js/script.js?39"></script>
+</body>
+</html>

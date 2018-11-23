@@ -1,0 +1,201 @@
+body {
+	padding: 0;
+	margin: 0;
+	background: rgba(203, 203, 210, 0.15);
+}
+
+table {
+	border-spacing: 0px;
+}
+
+#image > * {
+	-webkit-touch-callout:none;
+	-webkit-user-select:none;
+	user-select: none;
+}
+
+#card {
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    position: absolute;
+    word-wrap: break-word;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    display: grid;
+    grid-template-columns: auto 60%;
+}
+
+#card > .imagesAll {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-right: 1px solid rgba(0,0,0,.125);
+    background-image: url('assetsdrag.png');
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: 170px;
+    grid-row: 1;
+    grid-column: 1;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#card > .imagesAll > .preview {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 90px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin: 3px;
+    float: left;
+    background-color: #ffffff;
+    z-index: 1001;
+}
+
+#card > .imagesAll > .preview:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+#card > .editor {
+    margin-top: 10px;
+    grid-row: 1;
+    display: grid;
+    grid-template-rows: 410px auto;
+}
+
+#card > .editor > .transparent {
+    background-image: url('transparent.png');
+    width: auto;
+    height: 400px;
+    overflow: hidden;
+    grid-row: 1;
+}
+
+#card > .editor > .divTable {
+	grid-row: 2;
+	height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#table {
+	cursor: default;
+}
+
+#selector {
+	display: none;
+	position: absolute;
+	background-color: #ff5b0094;
+    border-radius: 3px;
+    padding: 2px;
+	width: 100px;
+	height: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+#selector > input[type='text'] {
+    width: 96px;
+    text-align:center;
+    border: 0px;
+    opacity: 0.9;
+}
+
+#card > .editor > #videoElement {
+    width: auto;
+    height: 400px;
+    overflow: hidden;
+    grid-row: 1;
+    display: none;
+}
+
+#card > .editor > .buttonScreen {
+    grid-row: 2;
+    height: 100%;
+    display: none;
+}
+
+#menu { 
+    grid-row: 1;
+    grid-column: 1;
+    width: 100%;
+    display: inline-table;
+}
+
+#menu > button, #control > button, #saveimage, #generate_data {
+    float: left;
+    border: 0;
+    margin: 1px;
+    color: #fff;
+    background-color: darkcyan;
+}
+
+#generate_data { 
+    float: none; 
+}
+.trash {
+    position: absolute;
+    bottom: 17px;
+    left: -300px;
+    z-index: 1000;
+    width: 60px;
+    height: 60px;
+    background-size: 60px 60px;
+    background-image: url('trash_icon.png');
+    opacity: 0.5;
+}
+
+.trash_active {
+    left: 17px;
+}
+
+.trash_hover {
+    opacity: 1;
+}
+
+#control {
+    width: 100%;
+    height: 25px;
+    display: block;
+}
+
+#control > button {
+    float: right;
+}
+
+#modal_background {
+    position: absolute;
+    z-index: 10000;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background-color: #008b8bcf;
+    display: none;
+}
+
+#modal {
+    position: absolute;
+    width: 218px;
+    height: 162px;
+    left: 50%;
+    top: 50%;
+    margin-left: -109px;
+    margin-top: -81px; 
+    background-color: white;
+}
+
+#modal > table {
+    width: -webkit-fill-available;
+    text-align: center;
+}
+
+input:disabled {
+    opacity: 0.2;
+}
